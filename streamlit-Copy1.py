@@ -141,7 +141,7 @@ gbc_pipe = make_pipeline(StandardScaler(), GradientBoostingClassifier( learning_
                                                                         n_estimators= 500,
                                                                       random_state=21))
 
-gbc_pipe.fit(X, y)
+gbc_pipe.fit(X_train, y_train)
 
 
 # In[47]:
@@ -150,9 +150,9 @@ gbc_pipe.fit(X, y)
 y_pred = gbc_pipe.predict(test_data)
 pred_streamlit = gbc_pipe.predict(pred_user)
 
-print('Gradient boosting regressor training data accuracy: {0:.2f}'.format(gbc_pipe.score(X_train, y_train)))
+print('Gradient boosting classifier training data accuracy: {0:.2f}'.format(gbc_pipe.score(X_train, y_train)))
 
-print('Gradient boosting regressor test data accuracy: {0:.2f}'.format(gbc_pipe.score(X_test, y_test)))
+print('Gradient boosting classifier test data accuracy: {0:.2f}'.format(gbc_pipe.score(X_test, y_test)))
 
 
 # In[48]:
