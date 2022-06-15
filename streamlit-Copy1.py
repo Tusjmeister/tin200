@@ -158,10 +158,10 @@ print('Gradient boosting classifier test data accuracy: {0:.2f}'.format(gbc_pipe
 # In[48]:
 
 
-if pred_streamlit == 0: 
-    st.write("Basert på dette får du lån  ")
-elif pred_streamlit> 0:
-    st.write("Basert på dette får du ikke lån  ")
+if pred_streamlit == 1:
+    st.write("Basert på dine oppgitte data er søknaden din om lån godkjent ")
+else:
+    st.write("Basert på dine oppgitte data er søknaden din om lån avslått ")
 
 
 # In[ ]:
