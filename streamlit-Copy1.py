@@ -29,6 +29,8 @@ import streamlit as st
 st.set_page_config(layout="wide")
 st.write(""" # Automatisering av låneprosessen""")
 
+st.sidebar.title("Vennligst fyll inn opplysningene dine her:")
+
 
 # In[12]:
 
@@ -43,6 +45,16 @@ test_data = pd.read_csv('imputed_test_new.csv', sep=',', index_col=False) # Nami
 st.sidebar.header("Inndata verdier")
 
 
+st.write('---')
+"""
+Velkommen kjære kunde! \n
+Hvis du er interessert i å ta opp et lån, kan du prøve dette programmet her.
+Det eneste du må gjøre er å fylle inn opplysningene dine, så gjør programmet resten for deg.
+Husk at dette bare er estimatorer basert på data hentet fra tidligere søkere. 
+Om du faktisk vil ha lån, må du fortsatt snakke med banken.\n
+Håper dette gjør prosessen lettere for deg.
+
+"""
 # In[14]:
 
 
